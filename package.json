@@ -1,0 +1,59 @@
+{
+	"name": "gitweb",
+	"displayName": "Jump to Git Webpage",
+	"description": "Adds a button to git repositories in the Source Control panel to jump to its web page on github or gitea",
+	"keywords": [
+	],
+	"icon": "icon.png",
+	"version": "0.1.0",
+	"publisher": "isopodlabs",
+	"repository": "https://github.com/adrianstephens/vscode-gitweb",
+	"files": [
+		"out/**/*.js",
+		"icon.png",
+		"LICENSE.txt"
+	],
+	"engines": {
+		"vscode": "^1.74.0"
+	},
+	"categories": [
+	],
+	"activationEvents": [
+	],
+	"main": "./out/extension.js",
+
+	"contributes": {
+		"commands": [
+			{
+				"command": "gitweb.openRepositoryUrl",
+				"title": "Open in Browser",
+				"icon": "$(link)"
+			}
+		],
+		"menus": {
+			"scm/title": [
+				{
+				  "command": "gitweb.openRepositoryUrl",
+				  "group": "navigation",
+				  "when": "scmProvider == git"
+				}
+			]
+		}
+	},
+
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"lint": "eslint \"src/**/*.ts\"",
+		"watch": "tsc -watch -p ./",
+		"publish": "vsce publish patch"
+	},
+	"devDependencies": {
+		"@types/node": "^18",
+		"@types/vscode": "^1.73.0",
+		"@typescript-eslint/eslint-plugin": "^7.14.0",
+		"@typescript-eslint/parser": "^7.14.0",
+		"eslint": "^8.26.0",
+		"ts-loader": "^9.5.1"
+	}
+}
