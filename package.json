@@ -5,7 +5,7 @@
 	"keywords": [
 	],
 	"icon": "icon.png",
-	"version": "0.1.0",
+	"version": "0.0.0",
 	"publisher": "isopodlabs",
 	"repository": "https://github.com/adrianstephens/vscode-gitweb",
 	"files": [
