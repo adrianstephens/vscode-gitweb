@@ -2,10 +2,9 @@
 	"name": "gitweb",
 	"displayName": "Jump to Git Webpage",
 	"description": "Adds a button to git repositories in the Source Control panel to jump to its web page on github or gitea",
-	"keywords": [
-	],
+	"keywords": [],
 	"icon": "icon.png",
-	"version": "0.0.0",
+	"version": "0.1.0",
 	"publisher": "isopodlabs",
 	"repository": "https://github.com/adrianstephens/vscode-gitweb",
 	"files": [
@@ -16,12 +15,9 @@
 	"engines": {
 		"vscode": "^1.74.0"
 	},
-	"categories": [
-	],
-	"activationEvents": [
-	],
+	"categories": [],
+	"activationEvents": [],
 	"main": "./out/extension.js",
-
 	"contributes": {
 		"commands": [
 			{
@@ -33,14 +29,13 @@
 		"menus": {
 			"scm/title": [
 				{
-				  "command": "gitweb.openRepositoryUrl",
-				  "group": "navigation",
-				  "when": "scmProvider == git"
+					"command": "gitweb.openRepositoryUrl",
+					"group": "navigation",
+					"when": "scmProvider == git"
 				}
 			]
 		}
 	},
-
 	"scripts": {
 		"vscode:prepublish": "npm run compile",
 		"compile": "tsc -p ./",
