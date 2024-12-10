@@ -4,22 +4,22 @@
 		"module": "CommonJS",
 		"moduleResolution": "Node10",
 		"lib": [
-			"es2022",
-			"ES2021.String"
+			"es2022"
 		],
 		"baseUrl": ".",
 		"paths": {
+			"@shared/*": ["./isopod/src/*"],
 			"./out/*": ["./src/*"]
 		},
 		"outDir": "out",
 		"sourceMap": true,
 		"strict": true,
-		"rootDir": "src",
-		"jsx": "react",
-		"jsxFactory": "jsx",
-		"jsxFragmentFactory": "fragment",
-		"forceConsistentCasingInFileNames": true
+		"rootDir": ".",
+		"jsx": "react-jsx",
+		"jsxImportSource": "@shared",
+		"forceConsistentCasingInFileNames": true,
+		"rewriteImports": true
 	},
-	"include": ["src", "hidden/VariablesView.tsx"],
+	"include": ["src/extension.tsx", "isopod/src/jsx.d.ts"],
 	"exclude": ["node_modules", ".vscode-test", "hidden"]
 }

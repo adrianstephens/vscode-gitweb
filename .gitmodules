@@ -1,0 +1,6 @@
+[submodule "src/shared"]
+	path = src/shared
+	url = https://github.com/adrianstephens/ts-shared.git
+[submodule "isopod"]
+	path = isopod
+	url = http://NASF840B9.local:3000/git/ts-shared.git

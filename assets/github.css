@@ -1,0 +1,85 @@
+
+
+
+.content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+    margin: 20px 0;
+
+	& div {
+		padding: 10px;
+		background: #f6f8fa;
+		border-radius: 6px;
+	}
+}
+
+.repo-header {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+	& h1 {
+		margin: 0;
+	}
+}
+
+.repo-section {
+    margin-bottom: 20px;
+	border: 1px solid #e1e4e8;
+	border-radius: 10px;
+	& h2 {
+		margin: 5px 15px 15px 15px;
+        position: relative;
+		&::after {
+			content: '';
+			position: absolute;
+			left: -15px;
+			right: -15px;
+			bottom: -15px;
+			height: 1px;
+			background: #ddd;
+        }
+	}
+}
+
+.repo-content {
+	display: flex;
+    flex-direction: column;
+
+	& ul {
+    	list-style: none;
+    	padding: 0;
+		margin: 0;
+	}
+
+	& li {
+		display: flex;
+		align-items: center;
+		padding: 8px 12px;
+		border-bottom: 1px solid #e1e4e8;
+
+		& .select {
+			min-width: 200px; /* Or whatever minimum width you want for filenames */
+		}
+		& > span:nth-child(2) {
+			flex: 1 1 auto; /* Allow growing and shrinking, take available space for commit message */
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+		}
+		& > span:last-child {
+			flex: 0 0 auto;
+		}
+
+		&:last-child {
+			border-bottom: none;
+		}
+	}
+}
+
+
